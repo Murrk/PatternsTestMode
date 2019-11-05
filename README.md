@@ -8,6 +8,9 @@
 
 * Склонировать репозиторий `git clone https://github.com/Murrk/PatternsTestMode.git`
 * Перейти в директорию с проектом
-* Развернуть jar целевого сервиса набрав в консоли команду `java -jar app-ibank.jar -P:profile=test`
+* Развернуть jar целевого сервиса набрав в консоли команду `java -jar app-ibank.jar`
+Для активации этого тестового режима при запуске SUT нужно указать флаг -P:profile=test, т.е.: `java -jar app-ibank.jar -P:profile=test.`
+Важно: если вы не активируете тестовый режим, любые запросы на http://localhost:9999/api/system/users будут вам возвращать 404 Not Found.
+
 * Выполнить команду `./gradlew test` (`./gradlew.bat test`, если запускается из windows)
 * Отчет можно посмотреть в директории `build/reports/tests/test/`
